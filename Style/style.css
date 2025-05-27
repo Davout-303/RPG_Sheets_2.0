@@ -1,0 +1,148 @@
+:root{
+    --black: #171717;
+    --graywhite: #f4f4f4;
+    --my-gradient: linear-gradient(to bottom, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+@font-face {
+    font-family: 'Mainfont';
+    src: url(/Assets/Goudy\ Mediaeval\ Regular.ttf);
+}
+
+
+/* Ajustes para telas muito pequenas */
+@media only screen and (max-width: 480px) {
+
+  .modal-content {
+    width: 80%;
+    max-width: 200px;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-group input, .form-group select {
+    width: 60%;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: var(--graywhite);
+    border: 1px solid var(--graywhite);
+    font-family: 'Mainfont';
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: var(--graywhite);
+    border: 1px solid var(--graywhite);
+    font-family: 'Mainfont';
+    cursor: pointer;
+}
+
+
+.form-actions button:hover {
+    background-color: #444;
+}
+}
+
+body{
+    background-color: var(--black);
+    color: var(--graywhite);
+    font-family: 'Mainfont';
+    margin: 0;
+    padding: 0;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--black);
+    padding: 2rem;
+    border: 2px solid var(--graywhite);
+    width: 80%;
+    max-width: 500px;
+}
+
+.modal-content h2 {
+    font-size: 2.3rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: var(--graywhite);
+    border: 1px solid var(--graywhite);
+    font-family: 'Mainfont';
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: var(--graywhite);
+    border: 1px solid var(--graywhite);
+    font-family: 'Mainfont';
+    cursor: pointer;
+}
+
+
+.form-actions button:hover {
+    background-color: #444;
+}
+
+.message {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.8s;
+    z-index: 1000;
+    font-size: 2rem;
+}

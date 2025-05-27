@@ -1,0 +1,229 @@
+/* Media Queries para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    #mid-content-row {
+        flex-direction: column; /* Empilha verticalmente */
+        align-items: center;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+    
+    #characters-atributes {
+        width: 18rem; /* Reduz a largura */
+        height: 18rem; /* Reduz a altura */
+        margin-bottom: 1rem;
+    }
+    
+    /* Ajusta o tamanho do canvas do gráfico */
+    #character-chart {
+        padding: 0.5rem; /* Reduz o padding */
+    }
+    
+    /* Ajusta os botões de atributo */
+    .attribute-button {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .attribute-button button {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    /* Ajusta a legenda e textos */
+    .chartjs-tooltip {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media only screen and (max-width: 480px) {
+    #characters-atributes {
+        width: 16rem;
+        height: 16rem;
+    }
+    
+    .chart-container {
+        min-height: 250px;
+    }
+    
+    /* Reduz ainda mais os elementos em telas muito pequenas */
+    .attribute-button {
+        transform: translate(-50%, 0) scale(0.9);
+    }
+    
+    .attribute-button:hover {
+        transform: translate(-50%, 0) scale(1);
+    }
+}
+
+
+
+#mid-content-row{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#characters-atributes{
+    position: relative;
+      border: 2px solid var(--graywhite);
+      width: 24rem;
+      height: 24rem;
+      
+}
+
+/* Estilo para o gráfico */
+#character-chart {
+    cursor: pointer;
+    position: relative;
+    padding: 1.5rem;
+}
+
+/* Estilo para os pontos do gráfico */
+#character-chart:hover {
+    opacity: 0.9;
+}
+
+/* Estilo visual quando um atributo está no máximo */
+.chartjs-tooltip {
+    background: rgba(179, 135, 40, 0.9);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Melhora a visibilidade do símbolo + */
+
+.attribute-button {
+    background: rgba(179, 135, 40, 0.8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s;
+    min-width: 40px;
+    text-align: center;
+}
+
+.attribute-button:hover {
+    background: rgba(179, 135, 40, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+#character-chart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+canvas {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 400px; /* Garante espaço mínimo */
+    padding: 40px; /* Espaço para os botões */
+}
+
+.label-buttons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -15px;
+    left: 30px;
+    pointer-events: none;
+    
+}
+
+.attribute-button {
+    position: absolute;
+    pointer-events: auto;
+    background: rgba(179, 135, 40, 0.9);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    width: 15px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -40%);
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.attribute-button button{
+    position: absolute;
+    pointer-events:all;
+    background: rgba(179, 135, 40, 0.9);
+    color: white;
+    border: none;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, 0);
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s ease;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.attribute-button:hover {
+    background: rgba(179, 135, 40, 1);
+    transform: translate(-50%, 0) scale(1.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+}
+
+.attribute-button:active {
+    transform: translate(-50%, 0) scale(0.95);
+}
+
+.attribute-tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 100;
+    display: none;
+}
+
+.attribute-tooltip button {
+    background: #b38b28;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}

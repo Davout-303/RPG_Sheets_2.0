@@ -1,0 +1,100 @@
+
+
+.atributos-primarios, 
+  .status, 
+  .proficiencias, 
+  .pericias, 
+  .habilidades{
+      position: relative; /* Permite posicionar os filhos de forma mais controlada */
+      border: 2px solid var(--graywhite);
+      width: 20rem;
+      height: 23rem;
+      padding-top: 1rem; /* Espaço no topo para evitar que o título grude na borda */
+      text-align: left;
+}
+
+.atributos-primarios h2, 
+.status h2, 
+.proficiencias h2, 
+.pericias h2, 
+.habilidades h2 {
+    color: #AA771C;
+    font-size: 2rem;
+    position: absolute; 
+    top: 0.75rem; 
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center; 
+    margin: 0;
+}
+
+
+.pericias, .habilidades {
+    position: relative;
+    height: 24.2rem;
+    padding-top: 3.5rem; /* Espaço para o título */
+    box-sizing: border-box;
+}
+
+.pericias textarea, .habilidades textarea {
+    width: 100%;
+    height: 100%; /* Garante que não ultrapasse o container */
+    background-color: var(--black);
+    border: 1px solid #ccc;
+    color: var(--graywhite);
+    font-size: 1.3rem;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.status-textarea {
+    width: 100%;
+    background-color: var(--black);
+    color: var(--graywhite);
+    border: none;
+    resize: none;
+    font-size: 1.3rem;
+}
+
+.status table, 
+.proficiencias ul, 
+.pericias ul, 
+.habilidades ul {
+   font-size: 1.3rem;
+   margin-top: 2.5rem;
+}
+
+.atributos-tabela {
+  font-size: 1.3rem;
+  width: 80%;
+  margin-top: 2.5rem;
+  border-collapse: collapse;
+  background-color: var(--black);
+  color: var(--graywhite);
+}
+#esquiva, #determinacao{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.atributos-tabela th,
+.atributos-tabela td,
+.status th,.status td {
+  width: 30%;
+  border: 1px solid var(--graywhite);
+  padding: 0.4rem;
+  text-align: left;
+}
+
+.atributos-tabela th {
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--graywhite);
+  color: var(--black);
+}
+
+.atributos-tabela tr:hover,.status .pv-pm tr:hover {
+  background-color: #333; /* Efeito ao passar o mouse */
+}
+
