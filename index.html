@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The God's apple</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./Scripts/script.js"></script>
+    <script src="Scripts/chart.js"></script>
+
+
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="stylesheet" href="./Style/top-row.css">
+    <link rel="stylesheet" href="./Style/mid-row-canvas.css">
+    <link rel="stylesheet" href="./Style/mid-row.css">
+</head>
+
+<body>
+    <main>
+
+        <!-- Modal de criação de personagem -->
+        <div id="character-modal" class="modal">
+            <div class="modal-content">
+                <h2>Criar Personagem</h2>
+                <form id="character-form">
+                    <div class="form-group">
+                        <label for="char-name">Nome do Personagem:</label>
+                        <input type="text" id="char-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="player-name">Nome do Jogador:</label>
+                        <input type="text" id="player-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="char-race">Raça:</label>
+                        <select id="char-race" required>
+                            <option value="">Selecione uma raça</option>
+                            <option value="Humano">Humano</option>
+                            <option value="Elfo">Elfo</option>
+                            <option value="Anão">Anão</option>
+                            <option value="Orc">Orc</option>
+                            <option value="Draconato">Draconato</option>
+                            <option value="Halfling">Hallfling</option>
+                            <option value="Gnomo">Gnomo</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button id="Iniciar">Iniciar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section id="top-content-row">
+            <div id="character-profile">
+                <input type="file" id="character-image-upload" accept="image/*" style="display: none;">
+                <label for="character-image-upload" id="upload-label">
+                    <i class="fas fa-camera-alt upload-icon"></i>
+                </label>
+                <h2 id="character-name">Personagem</h2>
+            </div>
+            <div id="character-info">
+                <ul id="ul-info">
+                    <li>Jogador: <span id="player-name-display">-</span></li>
+                    <li>Raça: <span id="char-race-display">-</span></li>
+                    <li>Nível: <span id="char-level-display">1  </span> <i class="fa-regular fa-square-plus meu-icone"> </i></li>
+                    <li>Pontos disponíveis: <span id="char-points-display">0</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+        <section id="mid-content-row">
+            <div id="characters-atributes">
+                <canvas id="character-chart"></canvas>
+                
+            </div>
+
+            <div class="status">
+                <h2>Status</h2>
+                <table class="pv-pm">
+                    
+                    <tr id="tr-pv">
+                        <td>Pontos de vida</td>
+                        <td><span id="pv-total"></span></td>
+                        <td><span id="pv-atual"></span><textarea id="pv-total" class="status-textarea"></textarea></textarea></td>
+                      </tr>
+                      <tr id="tr-pm">
+                        <td>Pontos de Mana</td>
+                        <td><span id="pm-total"></span></td>
+                        <td><span id="pm-atual"></span><textarea id="pm-total" class="status-textarea"></textarea></td>
+                      </tr>
+                </table>
+                <br>
+                <span class="placeholder" id="esquiva">Esquiva: [Definir]<br></span>
+                <br><br>
+                <span class="placeholder" id="determinacao">Determinação: [Definir]</span>
+               
+            </div>
+
+            <div class="pericias">
+                <h2>Perícias</h2>
+                <textarea name="texto-pericias" id="idtexto-pericias2"></textarea>
+            </div>
+
+            <div class="habilidades">
+                <h2>Habilidades</h2>
+                <textarea name="texto-habilidades" id="idtexto-habilidades2"></textarea>
+            </div>
+
+            
+        </section>
+
+        <div id="message-display" class="message"></div>
+</body>
+
+</html>
